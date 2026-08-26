@@ -1,9 +1,8 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DBZ Database FR — V6</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DBZ Database FR — V7</title>
 <style>
 :root{--bg:#050711;--panel:#0e1525;--line:#2d3a58;--txt:#fff;--muted:#9aa7bf;--gold:#ffd42a;--agi:#168cff;--tec:#20c86a;--int:#a45bff;--pui:#ff4052;--end:#ffd21c}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#293252,#050711 48%);color:var(--txt);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -19,7 +18,7 @@ nav{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}.tab{background:var(--pa
 </head>
 <body>
 <header><div class="wrap">
-<div class="brand"><div class="logo">DB</div><div><h1>DBZ Database FR</h1><div class="sub">Dokkan Battle × Dokkan Sparking — V6 • base de données structurée</div></div></div>
+<div class="brand"><div class="logo">DB</div><div><h1>DBZ Database FR</h1><div class="sub">Dokkan Battle × Dokkan Sparking — V7 • base locale</div></div></div>
 <nav><button class="tab active" data-game="all">Toutes les cartes</button><button class="tab" data-game="dokkan">Dokkan Battle</button><button class="tab" data-game="sparking">Dokkan Sparking</button></nav>
 <div class="controls">
 <input id="q" class="control" placeholder="🔎 Rechercher une carte…">
@@ -29,70 +28,26 @@ nav{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}.tab{background:var(--pa
 <select id="s" class="control"><option value="az">Nom A → Z</option><option value="za">Nom Z → A</option></select>
 </div>
 <div class="legend"><span class="badge type agi">AGI (AGL) — BLEU</span><span class="badge type tec">TEC (TEQ) — VERT</span><span class="badge type int">INT — VIOLET</span><span class="badge type pui">PUI (STR) — ROUGE</span><span class="badge type end">END (PHY) — JAUNE</span></div>
-<div class="stats"><span class="pill">Cartes affichées : <b id="count">0</b></span><span class="pill">Mode : <b id="mode">Toutes</b></span><span class="pill">Base : <b>V6</b></span></div>
+<div class="stats"><span class="pill">Cartes affichées : <b id="count">0</b></span><span class="pill">Mode : <b id="mode">Toutes</b></span><span class="pill">Base : <b>Locale V7</b></span></div>
 </div></header>
 <main class="wrap">
-<div class="notice">Base Dokkan chargée depuis une source structurée publique. Les noms et termes affichés sont normalisés en français ; les données de kit restent celles de la fiche source. Les cartes Dokkan Sparking restent séparées de Dokkan Battle.</div>
+<div class="notice">✅ Base locale : les cartes sont chargées depuis <b>cards.json</b> placé dans le même dépôt GitHub Pages. Aucun appel à une API externe n'est nécessaire pour afficher les cartes.</div>
 <section id="grid" class="grid"></section><div id="empty" class="empty" hidden>Aucune carte ne correspond.</div>
 <footer>Projet fan-made non affilié à Bandai Namco, Akatsuki ou aux ayants droit de Dragon Ball.</footer>
 </main>
 <div id="modal" class="modal"><div class="dialog"><button class="close" id="close">Fermer</button><div id="detail"></div></div></div>
 <script>
-const SOURCE="https://raw.githubusercontent.com/feijoes/DokkanAPI/main/data/DokkanCharacterData.json";
-let all=[], state={game:"all",q:"",r:"",t:"",c:"",s:"az"};
-
-const dict=[
-[/Super Saiyan 4/g,"Super Saiyen 4"],[/Super Saiyan 3/g,"Super Saiyen 3"],[/Super Saiyan 2/g,"Super Saiyen 2"],[/Super Saiyan/g,"Super Saiyen"],
-[/Ultimate Gohan/g,"Gohan ultime"],[/Gohan \\(Youth\\)/g,"Gohan (jeune)"],[/Gohan \\(Future\\)/g,"Gohan (futur)"],
-[/Trunks \\(Future\\)/g,"Trunks (futur)"],[/Vegeta \\(Angel\\)/g,"Vegeta (ange)"],[/Frieza/g,"Freezer"],[/Cooler/g,"Cooler"],
-[/Majin Buu/g,"Majin Buu"],[/Buu/g,"Boo"],[/Vegito/g,"Vegetto"],[/Gogeta/g,"Gogeta"],
-[/Goku/g,"Goku"],[/Vegeta/g,"Vegeta"],[/Piccolo/g,"Piccolo"],[/Krillin/g,"Krilin"],[/Tien/g,"Tenshinhan"],
-[/Yamcha/g,"Yamcha"],[/Androids/g,"Cyborgs"],[/Cell/g,"Cell"],[/Broly/g,"Broly"],[/Jiren/g,"Jiren"],
-[/Golden Warrior/g,"Guerrier doré"],[/Fierce Battle/g,"Combat acharné"],[/Legendary Power/g,"Pouvoir légendaire"],
-[/Pure Saiyans/g,"Saiyans purs"],[/Goku's Family/g,"Famille de Goku"],[/Vegeta's Family/g,"Famille de Vegeta"],
-[/Movie Heroes/g,"Héros de films"],[/Movie Bosses/g,"Boss des films"],[/Realm of Gods/g,"Royaume des Dieux"],
-[/Future Saga/g,"Saga du futur"],[/Time Travelers/g,"Voyageurs du temps"],[/Super Heroes/g,"Super Héros"],
-[/Hybrid Saiyans/g,"Saiyans hybrides"],[/Bond of Parent and Child/g,"Lien parent-enfant"],[/Kamehameha/g,"Kamehameha"],
-[/Transformation Boost/g,"Boost de transformation"],[/Potara/g,"Potara"],[/Fused Fighters/g,"Guerriers fusionnés"],
-[/Joined Forces/g,"Forces jointes"],[/Battle of Fate/g,"Combat du destin"],[/Power Beyond Super Saiyan/g,"Pouvoir au-delà du Super Saiyen"],
-[/Ki/g,"Ki"],[/HP/g,"PV"],[/ATK/g,"ATT"],[/DEF/g,"DÉF"],[/Extreme/g,"Extrême"],[/Super/g,"Super"]
-];
-function fr(x){let s=String(x??"");for(const [a,b] of dict)s=s.replace(a,b);return s}
-function typeFr(t){return ({AGL:"AGI",PHY:"END",STR:"PUI",INT:"INT",TEQ:"TEC",TEG:"TEC"})[t]||t}
-function cls(x){return x==="Extreme"?"Extreme":"Super"}
-function norm(x){return {...x,game:"dokkan",nameFr:fr(x.name),titleFr:fr(x.title),typeFr:typeFr(x.type)}}
-function filtered(){
- let a=all.filter(x=>(state.game==="all"||x.game===state.game)&&(!state.q||JSON.stringify(x).toLowerCase().includes(state.q.toLowerCase()))&&(!state.r||x.rarity===state.r)&&(!state.t||x.typeFr===state.t)&&(!state.c||x.class===state.c));
- a.sort((x,y)=>state.s==="az"?x.nameFr.localeCompare(y.nameFr):y.nameFr.localeCompare(x.nameFr)); return a;
-}
-function render(){
- const a=filtered();$("count").textContent=a.length;$("mode").textContent=state.game==="all"?"Toutes":state.game==="dokkan"?"Dokkan Battle":"Dokkan Sparking";
- $("empty").hidden=a.length>0;
- $("grid").innerHTML=a.map((x,i)=>`<article class="card" data-i="${i}"><div class="art"><div class="fallback">DBZ</div><img src="${x.imageURL}" alt="${x.nameFr}" loading="lazy" onerror="this.style.display='none'"><div class="shade"></div></div><div class="info"><div class="name">${x.nameFr}</div><div class="meta">${x.titleFr}</div><div class="badges"><span class="badge">${x.rarity}</span><span class="badge type ${x.typeFr.toLowerCase()}">${x.typeFr}</span><span class="badge">${cls(x.class)}</span></div></div></article>`).join("");
- document.querySelectorAll(".card").forEach((e,i)=>e.onclick=()=>openDetail(a[i]));
-}
-function openDetail(x){
- const cats=(x.categories||[]).map(fr).join(" • ")||"—", links=(x.links||[]).map(fr).join(" • ")||"—";
- $("detail").innerHTML=`<div class="hero"><div class="heroimg"><img src="${x.imageURL}" alt="${x.nameFr}"></div><div class="detail"><h2>${x.nameFr}</h2><p>${x.titleFr}</p><div class="badges"><span class="badge">${x.rarity}</span><span class="badge type ${x.typeFr.toLowerCase()}">${x.typeFr}</span><span class="badge">${cls(x.class)}</span><span class="badge">ID ${x.id}</span></div>
- <div class="statgrid"><div class="stat"><b>${x.maxLevelHP??"—"}</b>PV max</div><div class="stat"><b>${x.maxLevelAttack??"—"}</b>ATT max</div><div class="stat"><b>${x.maxDefence??"—"}</b>DÉF max</div></div>
- <div class="skill"><b>Compétence de leader</b><p>${fr(x.ezaLeaderSkill||x.leaderSkill||"—")}</p></div>
- <div class="skill"><b>Attaque spéciale</b><p>${fr(x.ezaSuperAttack||x.superAttack||"—")}</p>${x.ultraSuperAttack?`<p><b>Ultra Attaque Spéciale :</b> ${fr(x.ezaUltraSuperAttack||x.ultraSuperAttack)}</p>`:""}</div>
- <div class="skill"><b>Compétence passive</b><p>${fr(x.ezaPassive||x.passive||"—")}</p></div>
- ${x.activeSkill?`<div class="skill"><b>Compétence active</b><p>${fr(x.activeSkill)}</p><p><b>Condition :</b> ${fr(x.activeSkillCondition||"—")}</p></div>`:""}
- <div class="skill"><b>Catégories</b><p>${cats}</p></div><div class="skill"><b>Liens</b><p>${links}</p></div></div></div>`;
- $("modal").classList.add("open");
-}
-async function start(){
- try{
-   const raw=await fetch(SOURCE).then(r=>{if(!r.ok)throw Error(r.status);return r.json()});
-   all=raw.map(norm);
-   // Keep the separate "Dokkan Sparking" section intentionally independent.
-   render();
- }catch(e){
-   $("grid").innerHTML=`<div class="empty">Impossible de charger la base distante pour le moment.<br>Actualise la page pour réessayer.</div>`;
- }
-}
+let all=[],state={game:"all",q:"",r:"",t:"",c:"",s:"az"};
+const typeFr=t=>({AGL:"AGI",PHY:"END",STR:"PUI",INT:"INT",TEQ:"TEC",TEG:"TEC",AGI:"AGI",TEC:"TEC",PUI:"PUI",END:"END"})[t]||t;
+const fr=s=>String(s??"").replaceAll("Super Saiyan","Super Saiyen").replaceAll("Frieza","Freezer").replaceAll("Vegito","Vegetto").replaceAll("Buu","Boo");
+const $=id=>document.getElementById(id);
+function norm(x,i){return {...x,id:x.id??("local-"+i),game:x.game==="sparking"?"sparking":"dokkan",nameFr:fr(x.name),titleFr:fr(x.title),typeFr:typeFr(x.type),imageURL:x.imageURL||x.image||"",rarity:x.rarity||"—",class:x.class||"Super",leaderSkill:x.leaderSkill||x.leader||"—",superAttack:x.superAttack||x.sa||"—",passive:x.passive||"—",categories:x.categories||[],links:x.links||[],stats:x.stats||["—","—","—"]}}
+function filtered(){let a=all.filter(x=>(state.game==="all"||x.game===state.game)&&(!state.q||JSON.stringify(x).toLowerCase().includes(state.q.toLowerCase()))&&(!state.r||x.rarity===state.r)&&(!state.t||x.typeFr===state.t)&&(!state.c||x.class===state.c));a.sort((x,y)=>state.s==="az"?x.nameFr.localeCompare(y.nameFr):y.nameFr.localeCompare(x.nameFr));return a}
+function render(){let a=filtered();$("count").textContent=a.length;$("mode").textContent=state.game==="all"?"Toutes":state.game==="dokkan"?"Dokkan Battle":"Dokkan Sparking";$("empty").hidden=a.length>0;$("grid").innerHTML=a.map((x,i)=>`<article class="card" data-i="${i}"><div class="art"><div class="fallback">DBZ</div>${x.imageURL?`<img src="${x.imageURL}" alt="${x.nameFr}" loading="lazy" onerror="this.style.display='none'">`:""}<div class="shade"></div></div><div class="info"><div class="name">${x.nameFr}</div><div class="meta">${x.titleFr}</div><div class="badges"><span class="badge">${x.rarity}</span><span class="badge type ${x.typeFr.toLowerCase()}">${x.typeFr}</span><span class="badge">${x.class}</span></div></div></article>`).join("");document.querySelectorAll(".card").forEach((e,i)=>e.onclick=()=>openDetail(a[i]))}
+function openDetail(x){$("detail").innerHTML=`<div class="hero"><div class="heroimg">${x.imageURL?`<img src="${x.imageURL}" alt="${x.nameFr}">`:""}</div><div class="detail"><h2>${x.nameFr}</h2><p>${x.titleFr}</p><div class="badges"><span class="badge">${x.rarity}</span><span class="badge type ${x.typeFr.toLowerCase()}">${x.typeFr}</span><span class="badge">${x.class}</span><span class="badge">ID ${x.id}</span></div><div class="statgrid"><div class="stat"><b>${x.stats[0]}</b>PV</div><div class="stat"><b>${x.stats[1]}</b>ATT</div><div class="stat"><b>${x.stats[2]}</b>DÉF</div></div><div class="skill"><b>Compétence de leader</b><p>${fr(x.leaderSkill)}</p></div><div class="skill"><b>Attaque spéciale</b><p>${fr(x.superAttack)}</p></div><div class="skill"><b>Compétence passive</b><p>${fr(x.passive)}</p></div><div class="skill"><b>Catégories</b><p>${x.categories.map(fr).join(" • ")||"—"}</p></div><div class="skill"><b>Liens</b><p>${x.links.map(fr).join(" • ")||"—"}</p></div></div></div>`;$("modal").classList.add("open")}
+async function start(){try{let r=await fetch("./cards.json",{cache:"no-store"});if(!r.ok)throw Error(r.status);let data=await r.json();if(!Array.isArray(data))throw Error("cards.json doit être un tableau");all=data.map(norm);render()}catch(e){$("grid").innerHTML=`<div class="empty">❌ Impossible de charger <b>cards.json</b>.<br>Vérifie que le fichier est bien à la racine du dépôt, avec le nom exact <b>cards.json</b>.</div>`}}
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(z=>z.classList.remove("active"));b.classList.add("active");state.game=b.dataset.game;render()});
 $("q").oninput=e=>{state.q=e.target.value;render()};$("r").onchange=e=>{state.r=e.target.value;render()};$("t").onchange=e=>{state.t=e.target.value;render()};$("c").onchange=e=>{state.c=e.target.value;render()};$("s").onchange=e=>{state.s=e.target.value;render()};
 $("close").onclick=()=>$("modal").classList.remove("open");$("modal").onclick=e=>{if(e.target===$("modal"))$("modal").classList.remove("open")};start();
-</script></body></html>
+</script>
+</body></html>
