@@ -1,33 +1,98 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DBZ Database FR V5</title>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DBZ Database FR — V6</title>
 <style>
 :root{--bg:#050711;--panel:#0e1525;--line:#2d3a58;--txt:#fff;--muted:#9aa7bf;--gold:#ffd42a;--agi:#168cff;--tec:#20c86a;--int:#a45bff;--pui:#ff4052;--end:#ffd21c}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#293252,#050711 45%);color:var(--txt);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{background:#050711ed;backdrop-filter:blur(15px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.wrap{max-width:1900px;margin:auto;padding:16px 24px}
-.brand{display:flex;gap:14px;align-items:center}.logo{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,#ffe12c,#ff6800);display:grid;place-items:center;color:#111;font-weight:1000}.brand h1{font-size:34px;margin:0}.sub{color:var(--muted);font-size:13px;margin-top:3px}
-nav{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.tab{background:var(--panel);border:1px solid var(--line);color:var(--txt);padding:10px 17px;border-radius:12px;font-weight:850;font-size:15px}.tab.active{border-color:var(--gold);color:var(--gold)}
-.controls{display:grid;grid-template-columns:1fr 165px 165px 165px 165px;gap:9px;margin-top:13px}.control{background:var(--panel);border:1px solid var(--line);color:var(--txt);padding:12px;border-radius:12px;font:inherit}
-.legend{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.badge{display:inline-block;padding:4px 8px;border-radius:7px;border:1px solid #3a4968;background:#1a2336;font-size:11px;font-weight:950}.type{border:0}.agi{background:var(--agi)}.tec{background:var(--tec)}.int{background:var(--int)}.pui{background:var(--pui)}.end{background:var(--end);color:#111}.dokkan{color:#ffe477;background:#2c2209;border-color:#765b1b}.sparking{color:#d3b7ff;background:#28184e;border-color:#6943b0}
-.stats{display:flex;gap:8px;flex-wrap:wrap}.pill{background:#0b101b;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}.pill b{color:#fff}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:16px}.card{background:linear-gradient(180deg,#141b2b,#0b101b);border:2px solid #30405f;border-radius:18px;overflow:hidden;cursor:pointer;transition:.18s;box-shadow:0 12px 35px #0008}.card:hover{transform:translateY(-5px);border-color:#596c97}
-.art{aspect-ratio:1/1.22;background:#0b0f18;position:relative;overflow:hidden}.art img{width:100%;height:100%;object-fit:cover;display:block}.art .shade{position:absolute;inset:0;background:linear-gradient(0deg,#07101ddd 0%,transparent 45%,#0002 100%);pointer-events:none}.fallback{position:absolute;inset:0;display:grid;place-items:center;font-size:64px;color:#fff2;font-weight:1000}
-.info{padding:12px}.name{font-size:16px;font-weight:950}.meta{color:var(--muted);font-size:12px;margin-top:5px}.badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
-.empty{text-align:center;color:var(--muted);padding:70px}footer{padding:35px 0;color:#6f7e99;font-size:12px}.modal{display:none;position:fixed;inset:0;background:#000c;z-index:30;place-items:center;padding:18px}.modal.open{display:grid}.dialog{width:min(950px,100%);max-height:92vh;overflow:auto;background:#0b111e;border:1px solid #3b4b6d;border-radius:20px;padding:18px}.close{float:right;background:#202b40;color:#fff;border:0;border-radius:10px;padding:8px 12px;font-weight:800}.hero{display:grid;grid-template-columns:280px 1fr;gap:18px}.heroimg{border-radius:15px;overflow:hidden;background:#111827;min-height:330px}.heroimg img{width:100%;height:100%;object-fit:cover}.detail h2{font-size:30px;margin:4px 0}.skill{margin-top:12px;padding:13px;border:1px solid var(--line);border-radius:12px;background:#0f1727}.skill b{color:var(--gold)}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px}.stat{padding:10px;border:1px solid var(--line);border-radius:10px;background:#10192a;text-align:center}.stat b{display:block;font-size:18px;color:var(--gold)}
-@media(max-width:900px){.controls{grid-template-columns:1fr 1fr}.wrap{padding:13px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.brand h1{font-size:27px}}@media(max-width:480px){.grid{grid-template-columns:1fr 1fr}.card{border-radius:14px}.name{font-size:14px}}
-</style></head><body>
-<header><div class="wrap"><div class="brand"><div class="logo">DB</div><div><h1>DBZ Database FR</h1><div class="sub">Dokkan Battle × Dokkan Sparking — V5</div></div></div>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#293252,#050711 48%);color:var(--txt);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:#050711ee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.wrap{max-width:1900px;margin:auto;padding:15px 24px}
+.brand{display:flex;gap:14px;align-items:center}.logo{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,#ffe12c,#ff6800);display:grid;place-items:center;color:#111;font-weight:1000}.brand h1{font-size:32px;margin:0}.sub{color:var(--muted);font-size:13px}
+nav{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}.tab{background:var(--panel);border:1px solid var(--line);color:#fff;padding:10px 17px;border-radius:12px;font-weight:850}.tab.active{border-color:var(--gold);color:var(--gold)}
+.controls{display:grid;grid-template-columns:1fr 160px 160px 160px 160px;gap:8px;margin-top:12px}.control{background:var(--panel);border:1px solid var(--line);color:#fff;padding:11px;border-radius:12px;font:inherit}.legend{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}.badge{display:inline-block;padding:4px 8px;border-radius:7px;background:#192338;border:1px solid #3a4968;font-size:11px;font-weight:950}.type{border:0}.agi{background:var(--agi)}.tec{background:var(--tec)}.int{background:var(--int)}.pui{background:var(--pui)}.end{background:var(--end);color:#111}.stats{display:flex;gap:8px;flex-wrap:wrap}.pill{background:#0b101b;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}.pill b{color:#fff}
+.notice{margin:12px 0;padding:10px 12px;border:1px solid #344564;border-radius:12px;background:#0b1220;color:#b9c4d9;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:16px}.card{background:linear-gradient(180deg,#141b2b,#0b101b);border:2px solid #30405f;border-radius:18px;overflow:hidden;cursor:pointer;transition:.18s;box-shadow:0 12px 35px #0008}.card:hover{transform:translateY(-4px);border-color:#6479a7}.art{aspect-ratio:1/1.22;background:#0b0f18;position:relative;overflow:hidden}.art img{width:100%;height:100%;object-fit:cover;display:block}.shade{position:absolute;inset:0;background:linear-gradient(0deg,#07101ddd 0%,transparent 50%,#0002 100%)}.fallback{position:absolute;inset:0;display:grid;place-items:center;font-size:52px;color:#fff2;font-weight:1000}.info{padding:12px}.name{font-size:15px;font-weight:950}.meta{color:var(--muted);font-size:12px;margin-top:4px;min-height:30px}.badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}.empty{text-align:center;color:var(--muted);padding:70px}footer{padding:35px 0;color:#6f7e99;font-size:12px}
+.modal{display:none;position:fixed;inset:0;background:#000d;z-index:40;place-items:center;padding:18px}.modal.open{display:grid}.dialog{width:min(1050px,100%);max-height:92vh;overflow:auto;background:#0b111e;border:1px solid #3b4b6d;border-radius:20px;padding:18px}.close{float:right;background:#202b40;color:#fff;border:0;border-radius:10px;padding:8px 12px;font-weight:800}.hero{display:grid;grid-template-columns:300px 1fr;gap:18px}.heroimg{border-radius:15px;overflow:hidden;background:#111827;min-height:360px}.heroimg img{width:100%;height:100%;object-fit:cover}.detail h2{font-size:28px;margin:3px 0}.skill{margin-top:11px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#0f1727}.skill b{color:var(--gold)}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:11px}.stat{padding:9px;border:1px solid var(--line);border-radius:10px;background:#10192a;text-align:center}.stat b{display:block;font-size:17px;color:var(--gold)}
+@media(max-width:900px){.controls{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.wrap{padding:13px}}@media(max-width:480px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card{border-radius:14px}.name{font-size:13px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="brand"><div class="logo">DB</div><div><h1>DBZ Database FR</h1><div class="sub">Dokkan Battle × Dokkan Sparking — V6 • base de données structurée</div></div></div>
 <nav><button class="tab active" data-game="all">Toutes les cartes</button><button class="tab" data-game="dokkan">Dokkan Battle</button><button class="tab" data-game="sparking">Dokkan Sparking</button></nav>
-<div class="controls"><input id="q" class="control" placeholder="🔎 Rechercher une carte…"><select id="r" class="control"><option value="">Toutes les raretés</option><option>LR</option><option>UR</option><option>SP</option></select><select id="t" class="control"><option value="">Tous les types</option><option>AGI</option><option>TEC</option><option>INT</option><option>PUI</option><option>END</option></select><select id="c" class="control"><option value="">Toutes les classes</option><option>Super</option><option>Extreme</option></select><select id="s" class="control"><option value="az">Nom A → Z</option><option value="za">Nom Z → A</option></select></div>
-<div class="legend"><span class="badge type agi">AGI — BLEU</span><span class="badge type tec">TEC — VERT</span><span class="badge type int">INT — VIOLET</span><span class="badge type pui">PUI — ROUGE</span><span class="badge type end">END — JAUNE</span></div>
-<div class="stats"><span class="pill">Cartes affichées : <b id="count">0</b></span><span class="pill">Mode : <b id="mode">Toutes</b></span><span class="pill">Version : <b>V5</b></span></div></div></header>
-<main class="wrap"><section id="grid" class="grid"></section><div id="empty" class="empty" hidden>Aucune carte ne correspond.</div><footer>Projet fan-made non affilié aux ayants droit de Dragon Ball.</footer></main>
+<div class="controls">
+<input id="q" class="control" placeholder="🔎 Rechercher une carte…">
+<select id="r" class="control"><option value="">Toutes les raretés</option><option>LR</option><option>UR</option><option>SP</option></select>
+<select id="t" class="control"><option value="">Tous les types</option><option>AGI</option><option>TEC</option><option>INT</option><option>PUI</option><option>END</option></select>
+<select id="c" class="control"><option value="">Toutes les classes</option><option>Super</option><option>Extreme</option></select>
+<select id="s" class="control"><option value="az">Nom A → Z</option><option value="za">Nom Z → A</option></select>
+</div>
+<div class="legend"><span class="badge type agi">AGI (AGL) — BLEU</span><span class="badge type tec">TEC (TEQ) — VERT</span><span class="badge type int">INT — VIOLET</span><span class="badge type pui">PUI (STR) — ROUGE</span><span class="badge type end">END (PHY) — JAUNE</span></div>
+<div class="stats"><span class="pill">Cartes affichées : <b id="count">0</b></span><span class="pill">Mode : <b id="mode">Toutes</b></span><span class="pill">Base : <b>V6</b></span></div>
+</div></header>
+<main class="wrap">
+<div class="notice">Base Dokkan chargée depuis une source structurée publique. Les noms et termes affichés sont normalisés en français ; les données de kit restent celles de la fiche source. Les cartes Dokkan Sparking restent séparées de Dokkan Battle.</div>
+<section id="grid" class="grid"></section><div id="empty" class="empty" hidden>Aucune carte ne correspond.</div>
+<footer>Projet fan-made non affilié à Bandai Namco, Akatsuki ou aux ayants droit de Dragon Ball.</footer>
+</main>
 <div id="modal" class="modal"><div class="dialog"><button class="close" id="close">Fermer</button><div id="detail"></div></div></div>
 <script>
-let data=[],state={game:"all",q:"",r:"",t:"",c:"",s:"az"};const $=id=>document.getElementById(id),tc=t=>t.toLowerCase();
-async function start(){data=await fetch("cards.json").then(x=>x.json());render()}
-function filtered(){let a=data.filter(x=>(state.game==="all"||x.game===state.game)&&(!state.q||JSON.stringify(x).toLowerCase().includes(state.q.toLowerCase()))&&(!state.r||x.rarity===state.r)&&(!state.t||x.type===state.t)&&(!state.c||x.class===state.c));a.sort((x,y)=>state.s==="az"?x.name.localeCompare(y.name):y.name.localeCompare(x.name));return a}
-function render(){let a=filtered();$("count").textContent=a.length;$("mode").textContent=state.game==="all"?"Toutes":state.game==="dokkan"?"Dokkan Battle":"Dokkan Sparking";$("empty").hidden=a.length>0;$("grid").innerHTML=a.map((x,i)=>`<article class="card" data-i="${i}"><div class="art"><div class="fallback">DBZ</div><img src="${x.image}" alt="${x.name}" loading="lazy" onerror="this.style.display='none'"><div class="shade"></div></div><div class="info"><div class="name">${x.name}</div><div class="meta">${x.title}</div><div class="badges"><span class="badge ${x.game}">${x.game==="dokkan"?"DOKKAN BATTLE":"DOKKAN SPARKING"}</span><span class="badge">${x.rarity}</span><span class="badge type ${tc(x.type)}">${x.type}</span><span class="badge">${x.class}</span></div></div></article>`).join("");document.querySelectorAll(".card").forEach((e,i)=>e.onclick=()=>openDetail(a[i]))}
-function openDetail(x){$("detail").innerHTML=`<div class="hero"><div class="heroimg"><img src="${x.image}" alt="${x.name}"></div><div class="detail"><h2>${x.name}</h2><p>${x.title}</p><div class="badges"><span class="badge ${x.game}">${x.game==="dokkan"?"DOKKAN BATTLE":"DOKKAN SPARKING"}</span><span class="badge">${x.rarity}</span><span class="badge type ${tc(x.type)}">${x.type}</span><span class="badge">${x.class}</span></div><div class="statgrid"><div class="stat"><b>${x.stats[0]||"—"}</b>PV</div><div class="stat"><b>${x.stats[1]||"—"}</b>ATT</div><div class="stat"><b>${x.stats[2]||"—"}</b>DÉF</div></div><div class="skill"><b>Aptitude leader</b><p>${x.leader}</p></div><div class="skill"><b>Attaque spéciale</b><p>${x.sa}</p></div><div class="skill"><b>Aptitude passive</b><p>${x.passive}</p></div><div class="skill"><b>Catégories</b><p>${x.categories.join(" • ")}</p></div><div class="skill"><b>Liens</b><p>${x.links.length?x.links.join(" • "):"—"}</p></div></div></div>`;$("modal").classList.add("open")}
+const SOURCE="https://raw.githubusercontent.com/feijoes/DokkanAPI/main/data/DokkanCharacterData.json";
+let all=[], state={game:"all",q:"",r:"",t:"",c:"",s:"az"};
+
+const dict=[
+[/Super Saiyan 4/g,"Super Saiyen 4"],[/Super Saiyan 3/g,"Super Saiyen 3"],[/Super Saiyan 2/g,"Super Saiyen 2"],[/Super Saiyan/g,"Super Saiyen"],
+[/Ultimate Gohan/g,"Gohan ultime"],[/Gohan \\(Youth\\)/g,"Gohan (jeune)"],[/Gohan \\(Future\\)/g,"Gohan (futur)"],
+[/Trunks \\(Future\\)/g,"Trunks (futur)"],[/Vegeta \\(Angel\\)/g,"Vegeta (ange)"],[/Frieza/g,"Freezer"],[/Cooler/g,"Cooler"],
+[/Majin Buu/g,"Majin Buu"],[/Buu/g,"Boo"],[/Vegito/g,"Vegetto"],[/Gogeta/g,"Gogeta"],
+[/Goku/g,"Goku"],[/Vegeta/g,"Vegeta"],[/Piccolo/g,"Piccolo"],[/Krillin/g,"Krilin"],[/Tien/g,"Tenshinhan"],
+[/Yamcha/g,"Yamcha"],[/Androids/g,"Cyborgs"],[/Cell/g,"Cell"],[/Broly/g,"Broly"],[/Jiren/g,"Jiren"],
+[/Golden Warrior/g,"Guerrier doré"],[/Fierce Battle/g,"Combat acharné"],[/Legendary Power/g,"Pouvoir légendaire"],
+[/Pure Saiyans/g,"Saiyans purs"],[/Goku's Family/g,"Famille de Goku"],[/Vegeta's Family/g,"Famille de Vegeta"],
+[/Movie Heroes/g,"Héros de films"],[/Movie Bosses/g,"Boss des films"],[/Realm of Gods/g,"Royaume des Dieux"],
+[/Future Saga/g,"Saga du futur"],[/Time Travelers/g,"Voyageurs du temps"],[/Super Heroes/g,"Super Héros"],
+[/Hybrid Saiyans/g,"Saiyans hybrides"],[/Bond of Parent and Child/g,"Lien parent-enfant"],[/Kamehameha/g,"Kamehameha"],
+[/Transformation Boost/g,"Boost de transformation"],[/Potara/g,"Potara"],[/Fused Fighters/g,"Guerriers fusionnés"],
+[/Joined Forces/g,"Forces jointes"],[/Battle of Fate/g,"Combat du destin"],[/Power Beyond Super Saiyan/g,"Pouvoir au-delà du Super Saiyen"],
+[/Ki/g,"Ki"],[/HP/g,"PV"],[/ATK/g,"ATT"],[/DEF/g,"DÉF"],[/Extreme/g,"Extrême"],[/Super/g,"Super"]
+];
+function fr(x){let s=String(x??"");for(const [a,b] of dict)s=s.replace(a,b);return s}
+function typeFr(t){return ({AGL:"AGI",PHY:"END",STR:"PUI",INT:"INT",TEQ:"TEC",TEG:"TEC"})[t]||t}
+function cls(x){return x==="Extreme"?"Extreme":"Super"}
+function norm(x){return {...x,game:"dokkan",nameFr:fr(x.name),titleFr:fr(x.title),typeFr:typeFr(x.type)}}
+function filtered(){
+ let a=all.filter(x=>(state.game==="all"||x.game===state.game)&&(!state.q||JSON.stringify(x).toLowerCase().includes(state.q.toLowerCase()))&&(!state.r||x.rarity===state.r)&&(!state.t||x.typeFr===state.t)&&(!state.c||x.class===state.c));
+ a.sort((x,y)=>state.s==="az"?x.nameFr.localeCompare(y.nameFr):y.nameFr.localeCompare(x.nameFr)); return a;
+}
+function render(){
+ const a=filtered();$("count").textContent=a.length;$("mode").textContent=state.game==="all"?"Toutes":state.game==="dokkan"?"Dokkan Battle":"Dokkan Sparking";
+ $("empty").hidden=a.length>0;
+ $("grid").innerHTML=a.map((x,i)=>`<article class="card" data-i="${i}"><div class="art"><div class="fallback">DBZ</div><img src="${x.imageURL}" alt="${x.nameFr}" loading="lazy" onerror="this.style.display='none'"><div class="shade"></div></div><div class="info"><div class="name">${x.nameFr}</div><div class="meta">${x.titleFr}</div><div class="badges"><span class="badge">${x.rarity}</span><span class="badge type ${x.typeFr.toLowerCase()}">${x.typeFr}</span><span class="badge">${cls(x.class)}</span></div></div></article>`).join("");
+ document.querySelectorAll(".card").forEach((e,i)=>e.onclick=()=>openDetail(a[i]));
+}
+function openDetail(x){
+ const cats=(x.categories||[]).map(fr).join(" • ")||"—", links=(x.links||[]).map(fr).join(" • ")||"—";
+ $("detail").innerHTML=`<div class="hero"><div class="heroimg"><img src="${x.imageURL}" alt="${x.nameFr}"></div><div class="detail"><h2>${x.nameFr}</h2><p>${x.titleFr}</p><div class="badges"><span class="badge">${x.rarity}</span><span class="badge type ${x.typeFr.toLowerCase()}">${x.typeFr}</span><span class="badge">${cls(x.class)}</span><span class="badge">ID ${x.id}</span></div>
+ <div class="statgrid"><div class="stat"><b>${x.maxLevelHP??"—"}</b>PV max</div><div class="stat"><b>${x.maxLevelAttack??"—"}</b>ATT max</div><div class="stat"><b>${x.maxDefence??"—"}</b>DÉF max</div></div>
+ <div class="skill"><b>Compétence de leader</b><p>${fr(x.ezaLeaderSkill||x.leaderSkill||"—")}</p></div>
+ <div class="skill"><b>Attaque spéciale</b><p>${fr(x.ezaSuperAttack||x.superAttack||"—")}</p>${x.ultraSuperAttack?`<p><b>Ultra Attaque Spéciale :</b> ${fr(x.ezaUltraSuperAttack||x.ultraSuperAttack)}</p>`:""}</div>
+ <div class="skill"><b>Compétence passive</b><p>${fr(x.ezaPassive||x.passive||"—")}</p></div>
+ ${x.activeSkill?`<div class="skill"><b>Compétence active</b><p>${fr(x.activeSkill)}</p><p><b>Condition :</b> ${fr(x.activeSkillCondition||"—")}</p></div>`:""}
+ <div class="skill"><b>Catégories</b><p>${cats}</p></div><div class="skill"><b>Liens</b><p>${links}</p></div></div></div>`;
+ $("modal").classList.add("open");
+}
+async function start(){
+ try{
+   const raw=await fetch(SOURCE).then(r=>{if(!r.ok)throw Error(r.status);return r.json()});
+   all=raw.map(norm);
+   // Keep the separate "Dokkan Sparking" section intentionally independent.
+   render();
+ }catch(e){
+   $("grid").innerHTML=`<div class="empty">Impossible de charger la base distante pour le moment.<br>Actualise la page pour réessayer.</div>`;
+ }
+}
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(z=>z.classList.remove("active"));b.classList.add("active");state.game=b.dataset.game;render()});
-$("q").oninput=e=>{state.q=e.target.value;render()};$("r").onchange=e=>{state.r=e.target.value;render()};$("t").onchange=e=>{state.t=e.target.value;render()};$("c").onchange=e=>{state.c=e.target.value;render()};$("s").onchange=e=>{state.s=e.target.value;render()};$("close").onclick=()=>$("modal").classList.remove("open");$("modal").onclick=e=>{if(e.target===$("modal"))$("modal").classList.remove("open")};start();
+$("q").oninput=e=>{state.q=e.target.value;render()};$("r").onchange=e=>{state.r=e.target.value;render()};$("t").onchange=e=>{state.t=e.target.value;render()};$("c").onchange=e=>{state.c=e.target.value;render()};$("s").onchange=e=>{state.s=e.target.value;render()};
+$("close").onclick=()=>$("modal").classList.remove("open");$("modal").onclick=e=>{if(e.target===$("modal"))$("modal").classList.remove("open")};start();
 </script></body></html>
