@@ -1,0 +1,651 @@
+[
+  {
+    "game": "dokkan",
+    "name": "Vegeta Super Saiyen 4",
+    "title": "Fierté royale qui a secoué la Terre",
+    "rarity": "UR",
+    "type": "END",
+    "class": "Super",
+    "id": "demo-001",
+    "leader": "« Puissance primordiale » Ki +3, PV/ATK/DEF +130 %",
+    "sa": "Final Shine Attack",
+    "passive": "ATK & DEF +200 % ; garde contre toutes les attaques ; forte chance d'effectuer une attaque spéciale supplémentaire.",
+    "categories": [
+      "Puissance primordiale",
+      "Héros GT",
+      "Saiyans purs"
+    ],
+    "links": [
+      "Super Saiyen",
+      "Fierce Battle",
+      "Golden Warrior"
+    ],
+    "stats": [
+      12800,
+      13200,
+      8500
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Majin Duu",
+    "title": "Dernier espoir du Majin",
+    "rarity": "UR",
+    "type": "TEC",
+    "class": "Extreme",
+    "id": "demo-002",
+    "leader": "« DAIMA » Ki +3, PV/ATK/DEF +130 %",
+    "sa": "Double Shot",
+    "passive": "ATK & DEF +200 % ; réduction des dégâts ; bonus aux alliés « DAIMA ».",
+    "categories": [
+      "DAIMA",
+      "Majin",
+      "Royaume démoniaque"
+    ],
+    "links": [
+      "Majin",
+      "Cold Judgment",
+      "Fierce Battle"
+    ],
+    "stats": [
+      11500,
+      12100,
+      7900
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Vegeta Super Saiyen 3 (DAIMA)",
+    "title": "Fierté féroce du Royaume Démoniaque",
+    "rarity": "LR",
+    "type": "INT",
+    "class": "Super",
+    "id": "demo-003",
+    "leader": "« Lien d’amour » ou « Pleine puissance » Ki +3, PV +220 %, ATK/DEF +220 %",
+    "sa": "Massacre Strike",
+    "passive": "Animation d'entrée ; ATK +300 % une fois seulement ; forte chance de coup critique pendant 6 tours.",
+    "categories": [
+      "DAIMA",
+      "Saiyans purs",
+      "Super Saiyen 3"
+    ],
+    "links": [
+      "Super Saiyen",
+      "Fierce Battle",
+      "Legendary Power"
+    ],
+    "stats": [
+      20500,
+      22100,
+      14000
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Goku Ultra Instinct & Vegeta Ultra Ego",
+    "title": "Coopération des guerriers divins",
+    "rarity": "LR",
+    "type": "INT",
+    "class": "Super",
+    "id": "demo-004",
+    "leader": "« Puissance dépassant les limites » ou « Guerriers alliés » Ki +3, PV +200 %, ATK/DEF +170 %",
+    "sa": "Symphonie divine",
+    "passive": "Maîtrise des formes divines ; bonus offensifs et défensifs selon les conditions.",
+    "categories": [
+      "Puissance dépassant les limites",
+      "Guerriers alliés",
+      "Dieux"
+    ],
+    "links": [
+      "Combat acharné",
+      "Pouvoir divin",
+      "Puissance légendaire"
+    ],
+    "stats": [
+      21000,
+      22500,
+      14500
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Gogeta Super Saiyen Blue",
+    "title": "Fusion ultime",
+    "rarity": "LR",
+    "type": "AGL",
+    "class": "Super",
+    "id": "demo-005",
+    "leader": "« Héros de film » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Kamehameha ultime",
+    "passive": "ATK & DEF augmentées ; attaques efficaces contre tous les types sous conditions.",
+    "categories": [
+      "Héros de film",
+      "Fusion",
+      "Saiyans purs"
+    ],
+    "links": [
+      "Super Saiyen",
+      "Fierce Battle",
+      "Legendary Power"
+    ],
+    "stats": [
+      19800,
+      22900,
+      13200
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Vegetto Super Saiyen Blue",
+    "title": "Guerrier fusionné",
+    "rarity": "LR",
+    "type": "TEQ",
+    "class": "Super",
+    "id": "demo-006",
+    "leader": "« Guerriers alliés » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Épée spirituelle",
+    "passive": "Grande augmentation de l'ATK et de la DEF ; contre-attaques sous conditions.",
+    "categories": [
+      "Fusion Potara",
+      "Guerriers alliés",
+      "Dieux"
+    ],
+    "links": [
+      "Super Saiyen",
+      "Fierce Battle",
+      "Legendary Power"
+    ],
+    "stats": [
+      20200,
+      22100,
+      13700
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Broly Super Saiyen légendaire",
+    "title": "Le berserker légendaire",
+    "rarity": "LR",
+    "type": "STR",
+    "class": "Extreme",
+    "id": "demo-007",
+    "leader": "« Boss de films » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Gigantic Meteor",
+    "passive": "Puissance offensive croissante ; dégâts supplémentaires contre certains ennemis.",
+    "categories": [
+      "Boss de films",
+      "Saiyans purs",
+      "Super Saiyen légendaire"
+    ],
+    "links": [
+      "Super Saiyen",
+      "Big Bad Bosses",
+      "Fierce Battle"
+    ],
+    "stats": [
+      20500,
+      23200,
+      12800
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Freezer (Pleine Puissance)",
+    "title": "Empereur de l'Univers",
+    "rarity": "UR",
+    "type": "INT",
+    "class": "Extreme",
+    "id": "demo-008",
+    "leader": "« Lignée démoniaque » Ki +3, PV/ATK/DEF +130 %",
+    "sa": "Nova mortelle",
+    "passive": "ATK & DEF augmentées ; dégâts supplémentaires contre les Saiyans.",
+    "categories": [
+      "Lignée démoniaque",
+      "Boss de films",
+      "Transformation"
+    ],
+    "links": [
+      "Lignée démoniaque",
+      "Big Bad Bosses",
+      "Fierce Battle"
+    ],
+    "stats": [
+      13200,
+      14100,
+      9200
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Cell Parfait",
+    "title": "Forme parfaite",
+    "rarity": "UR",
+    "type": "END",
+    "class": "Extreme",
+    "id": "demo-009",
+    "leader": "« Boss de films » Ki +3, PV/ATK/DEF +130 %",
+    "sa": "Kamehameha solaire",
+    "passive": "Récupération de PV ; ATK & DEF augmentées ; bonus après avoir reçu une attaque.",
+    "categories": [
+      "Saga des Cyborgs",
+      "Forme parfaite",
+      "Boss de films"
+    ],
+    "links": [
+      "Big Bad Bosses",
+      "Fierce Battle",
+      "Cellule parfaite"
+    ],
+    "stats": [
+      13000,
+      13900,
+      9500
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Buu (Super)",
+    "title": "Absorption",
+    "rarity": "UR",
+    "type": "TEQ",
+    "class": "Extreme",
+    "id": "demo-010",
+    "leader": "« Majin » Ki +3, PV/ATK/DEF +130 %",
+    "sa": "Boule de puissance",
+    "passive": "ATK & DEF augmentées ; récupération de PV ; effets supplémentaires après absorption.",
+    "categories": [
+      "Majin",
+      "Buuhan",
+      "Transformation"
+    ],
+    "links": [
+      "Majin",
+      "Big Bad Bosses",
+      "Fierce Battle"
+    ],
+    "stats": [
+      12700,
+      13600,
+      9700
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Goku Super Saiyen",
+    "title": "Guerrier légendaire",
+    "rarity": "UR",
+    "type": "AGL",
+    "class": "Super",
+    "id": "demo-011",
+    "leader": "« Saiyans purs » Ki +3, PV/ATK/DEF +130 %",
+    "sa": "Kamehameha",
+    "passive": "ATK & DEF augmentées ; bonus de Ki et de critique.",
+    "categories": [
+      "Saiyans purs",
+      "Super Saiyen",
+      "Famille de Goku"
+    ],
+    "links": [
+      "Super Saiyen",
+      "Kamehameha",
+      "Fierce Battle"
+    ],
+    "stats": [
+      12000,
+      12800,
+      8200
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Goku Super Saiyen 3",
+    "title": "Puissance au-delà des limites",
+    "rarity": "UR",
+    "type": "STR",
+    "class": "Super",
+    "id": "demo-012",
+    "leader": "« Super Saiyen 3 » Ki +3, PV/ATK/DEF +130 %",
+    "sa": "Dragon Fist",
+    "passive": "ATK & DEF augmentées ; forte chance d'effectuer une attaque spéciale supplémentaire.",
+    "categories": [
+      "Super Saiyen 3",
+      "Saiyans purs",
+      "Famille de Goku"
+    ],
+    "links": [
+      "Super Saiyen 3",
+      "Fierce Battle",
+      "Golden Warrior"
+    ],
+    "stats": [
+      12500,
+      14500,
+      8000
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Gohan Ultime",
+    "title": "Pouvoir libéré",
+    "rarity": "UR",
+    "type": "AGL",
+    "class": "Super",
+    "id": "demo-013",
+    "leader": "« Guerriers hybrides » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Masenko ultime",
+    "passive": "ATK & DEF augmentées ; réduction des dégâts et bonus de Ki.",
+    "categories": [
+      "Guerriers hybrides",
+      "Famille de Gohan",
+      "Kamehameha"
+    ],
+    "links": [
+      "Kamehameha",
+      "Fierce Battle",
+      "Prepared for Battle"
+    ],
+    "stats": [
+      13800,
+      15000,
+      9100
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Piccolo Orange",
+    "title": "Puissance éveillée",
+    "rarity": "LR",
+    "type": "STR",
+    "class": "Super",
+    "id": "demo-014",
+    "leader": "« Héros de film » Ki +3, PV/ATK/DEF +200 %",
+    "sa": "Explosion géante",
+    "passive": "Garde ; réduction des dégâts ; puissance accrue contre les ennemis de la Saga Super Héros.",
+    "categories": [
+      "Héros de film",
+      "Saga Super Héros",
+      "Namek"
+    ],
+    "links": [
+      "Fierce Battle",
+      "Cold Judgment",
+      "Hero of Justice"
+    ],
+    "stats": [
+      22000,
+      21500,
+      15100
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Gamma 1",
+    "title": "Le super-héros numéro 1",
+    "rarity": "LR",
+    "type": "AGL",
+    "class": "Super",
+    "id": "demo-015",
+    "leader": "« Saga Super Héros » Ki +3, PV/ATK/DEF +200 %",
+    "sa": "Gamma Impact",
+    "passive": "Garde contre toutes les attaques ; bonus défensifs et offensifs.",
+    "categories": [
+      "Saga Super Héros",
+      "Héros de film",
+      "Guerriers alliés"
+    ],
+    "links": [
+      "Fierce Battle",
+      "Hero of Justice",
+      "Cold Judgment"
+    ],
+    "stats": [
+      20100,
+      20200,
+      14900
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Gamma 2",
+    "title": "Le super-héros numéro 2",
+    "rarity": "LR",
+    "type": "TEQ",
+    "class": "Super",
+    "id": "demo-016",
+    "leader": "« Saga Super Héros » Ki +3, PV/ATK/DEF +200 %",
+    "sa": "Gamma Blaster",
+    "passive": "ATK élevée ; attaques supplémentaires et bonus de critique.",
+    "categories": [
+      "Saga Super Héros",
+      "Héros de film",
+      "Guerriers alliés"
+    ],
+    "links": [
+      "Fierce Battle",
+      "Hero of Justice",
+      "Shocking Speed"
+    ],
+    "stats": [
+      19800,
+      21800,
+      13900
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Goku Black Super Saiyen Rosé",
+    "title": "Rose de la puissance absolue",
+    "rarity": "UR",
+    "type": "STR",
+    "class": "Extreme",
+    "id": "demo-017",
+    "leader": "« Boss de l'avenir » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Kamehameha divin",
+    "passive": "ATK & DEF augmentées ; Ki supplémentaire et dégâts critiques.",
+    "categories": [
+      "Boss de l'avenir",
+      "Dieux",
+      "Super Saiyen Rosé"
+    ],
+    "links": [
+      "Big Bad Bosses",
+      "Fierce Battle",
+      "Super Saiyen Rosé"
+    ],
+    "stats": [
+      13200,
+      14600,
+      9000
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Jiren",
+    "title": "La force qui transcende tout",
+    "rarity": "LR",
+    "type": "AGL",
+    "class": "Extreme",
+    "id": "demo-018",
+    "leader": "« Tournoi du Pouvoir » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Impact de puissance",
+    "passive": "Grande puissance offensive ; chance élevée de coup critique.",
+    "categories": [
+      "Tournoi du Pouvoir",
+      "Univers 11",
+      "Pleine puissance"
+    ],
+    "links": [
+      "Fierce Battle",
+      "Shocking Speed",
+      "Legendary Power"
+    ],
+    "stats": [
+      20400,
+      22000,
+      14100
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Caulifla",
+    "title": "Prodige Saiyan",
+    "rarity": "LR",
+    "type": "END",
+    "class": "Super",
+    "id": "demo-019",
+    "leader": "« Univers 6 » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Canon énergétique",
+    "passive": "Esquive ; bonus contre certains ennemis ; attaques supplémentaires.",
+    "categories": [
+      "Univers 6",
+      "Saiyans purs",
+      "Tournoi du Pouvoir"
+    ],
+    "links": [
+      "Super Saiyen",
+      "Prepared for Battle",
+      "Fierce Battle"
+    ],
+    "stats": [
+      19600,
+      20700,
+      13800
+    ]
+  },
+  {
+    "game": "dokkan",
+    "name": "Majin Vegeta",
+    "title": "Explosion finale",
+    "rarity": "LR",
+    "type": "INT",
+    "class": "Extreme",
+    "id": "demo-020",
+    "leader": "« Saiyans purs » Ki +3, PV/ATK/DEF +170 %",
+    "sa": "Explosion finale",
+    "passive": "ATK & DEF augmentées ; bonus de puissance après réception d'une attaque.",
+    "categories": [
+      "Saiyans purs",
+      "Majin",
+      "Super Saiyen 2"
+    ],
+    "links": [
+      "Super Saiyen 2",
+      "Fierce Battle",
+      "Over in a Flash"
+    ],
+    "stats": [
+      20100,
+      21800,
+      13700
+    ]
+  },
+  {
+    "game": "sparking",
+    "name": "Son Goku",
+    "title": "Dokkan Sparking — Forme de base",
+    "rarity": "SP",
+    "type": "AGL",
+    "class": "Super",
+    "id": "sp-001",
+    "leader": "—",
+    "sa": "Kamehameha",
+    "passive": "Compétence spéciale de combat.",
+    "categories": [
+      "Saiyans",
+      "Héros"
+    ],
+    "links": [],
+    "stats": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "game": "sparking",
+    "name": "Vegeta",
+    "title": "Dokkan Sparking — Prince des Saiyans",
+    "rarity": "SP",
+    "type": "STR",
+    "class": "Super",
+    "id": "sp-002",
+    "leader": "—",
+    "sa": "Galick Gun",
+    "passive": "Compétence spéciale de combat.",
+    "categories": [
+      "Saiyans",
+      "Héros"
+    ],
+    "links": [],
+    "stats": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "game": "sparking",
+    "name": "Gogeta Super Saiyen Blue",
+    "title": "Dokkan Sparking — Fusion",
+    "rarity": "SP",
+    "type": "INT",
+    "class": "Super",
+    "id": "sp-003",
+    "leader": "—",
+    "sa": "Big Bang Kamehameha",
+    "passive": "Compétence spéciale de fusion.",
+    "categories": [
+      "Fusion",
+      "Saiyans"
+    ],
+    "links": [],
+    "stats": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "game": "sparking",
+    "name": "Broly Super Saiyen légendaire",
+    "title": "Dokkan Sparking — Berserker",
+    "rarity": "SP",
+    "type": "END",
+    "class": "Extreme",
+    "id": "sp-004",
+    "leader": "—",
+    "sa": "Gigantic Meteor",
+    "passive": "Compétence spéciale du berserker.",
+    "categories": [
+      "Broly",
+      "Saiyans"
+    ],
+    "links": [],
+    "stats": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "game": "sparking",
+    "name": "Freezer",
+    "title": "Dokkan Sparking — Empereur de l'Univers",
+    "rarity": "SP",
+    "type": "TEC",
+    "class": "Extreme",
+    "id": "sp-005",
+    "leader": "—",
+    "sa": "Death Beam",
+    "passive": "Compétence spéciale de l'Empereur.",
+    "categories": [
+      "Lignée démoniaque"
+    ],
+    "links": [],
+    "stats": [
+      0,
+      0,
+      0
+    ]
+  }
+]
