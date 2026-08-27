@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>DBZ Database FR — V11</title>
+<title>DBZ Database FR — V13</title>
 <style>
 :root{--bg:#080a11;--panel:#111622;--panel2:#171d2b;--line:#2a3550;--text:#f5f7ff;--muted:#99a6bf;--gold:#ffd84d;--blue:#45a7ff;--green:#28d17c;--violet:#ad6cff;--red:#ff5266;--yellow:#ffd33d;--orange:#ff9d3d}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#1a2744 0,#090b12 38%,#070810 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:1800px;margin:auto;padding:0 24px}
@@ -16,17 +16,33 @@
 .modal{position:fixed;inset:0;background:#000b;display:none;z-index:100;padding:18px}.modal.open{display:block}.dialog{max-width:1200px;height:calc(100vh - 36px);margin:auto;overflow:auto;background:#0c111c;border:1px solid #3b4864;border-radius:18px;box-shadow:0 30px 100px #000}.detailHead{padding:20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.close{border:1px solid var(--line);background:#182033;color:#fff;border-radius:9px;padding:9px 12px;cursor:pointer}.detail{display:grid;grid-template-columns:360px 1fr;gap:20px;padding:20px}.detailArt{background:#070a10;border:1px solid var(--line);border-radius:13px;overflow:hidden;align-self:start}.detailArt img{width:100%;display:block;object-fit:contain}.detail h2{margin:0;font-size:26px}.detail .muted{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 0}.stat{background:#111827;border:1px solid var(--line);padding:11px;border-radius:10px}.stat b{display:block;font-size:10px;color:#7f8da6;text-transform:uppercase}.stat strong{font-size:17px}.sectionBox{background:#101623;border:1px solid var(--line);border-radius:12px;margin-top:12px;overflow:hidden}.sectionTitle{padding:10px 13px;background:#171e2d;border-bottom:1px solid var(--line);font-weight:950}.sectionText{padding:13px;color:#d8deea;line-height:1.55;white-space:pre-line}.linkgrid,.catgrid{display:flex;gap:7px;flex-wrap:wrap;padding:13px}.tag{padding:7px 9px;background:#192238;border:1px solid #35445f;border-radius:8px;font-size:12px}.note{margin:20px 24px;padding:12px 14px;background:#111827;border:1px solid var(--line);border-radius:10px;color:#aab5ca;font-size:13px}
 @media(max-width:1000px){.layout{grid-template-columns:1fr}.side{display:none}.searchTop{display:none}.nav{overflow:auto}.detail{grid-template-columns:1fr}.detailArt{max-width:430px;margin:auto;width:100%}.filters{grid-template-columns:1fr 1fr}.hero{align-items:start;flex-direction:column}}
 @media(max-width:560px){.wrap{padding:0 12px}.topbar{height:auto;min-height:64px;flex-wrap:wrap;padding:9px 0}.brand{min-width:0}.brand small{display:none}.nav{order:3;width:100%;padding-bottom:4px}.filters{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cardInfo{padding:9px}.cardName{font-size:13px}.detail{padding:13px}.dialog{height:100vh;margin:-18px;border-radius:0}.detailHead{padding:14px}.stats{grid-template-columns:1fr 1fr 1fr}}
+
+.dbnav{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line)}
+.dbnav a{color:var(--text);text-decoration:none;background:var(--panel2);border:1px solid var(--line);padding:8px 12px;border-radius:10px;font-weight:800;font-size:13px}
+.dbnav a:hover{border-color:var(--gold);color:var(--gold)}
+.sectionbar{display:flex;gap:8px;align-items:center;justify-content:space-between;margin:18px 0 10px}
+.sectionbar h2{font-size:18px;margin:0}.sectionbar span{color:var(--muted);font-size:12px}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap topbar"><div class="brand"><div class="logo">DB</div><div><h1>DBZ Database FR</h1><small>Dokkan Battle × Dokkan Sparking</small></div></div><nav class="nav"><button class="active" data-game="all">Toutes les cartes</button><button data-game="dokkan">Dokkan Battle</button><button data-game="sparking">Dokkan Sparking</button></nav><div class="searchTop"><input id="search" placeholder="Rechercher une carte…"></div></div></header>
+<header class="top"><div class="wrap topbar"><div class="brand"><div class="logo">DB</div><div><h1>DBZ Database FR</h1><small>Dokkan Battle × Dokkan Sparking</small></div></div><nav class="nav"><button class="active" data-game="all">Toutes les cartes</button><button data-game="dokkan">Dokkan Battle</button><button data-game="sparking">Dokkan Sparking</button></nav>
+<nav class="dbnav" aria-label="Navigation principale">
+<a href="#cartes">Cartes</a>
+<a href="#competences">Compétences</a>
+<a href="#categories">Catégories</a>
+<a href="#liens">Liens</a>
+<a href="#types">Types</a>
+<a href="#dokkan">Dokkan Battle</a>
+<a href="#sparking">Dokkan Sparking</a>
+</nav>
+<div class="searchTop"><input id="search" placeholder="Rechercher une carte…"></div></div></header>
 <main class="wrap layout">
 <aside class="side"><h3>NAVIGATION</h3><button class="active" data-game="all">▦ Toutes les cartes</button><button data-game="dokkan">◈ Dokkan Battle</button><button data-game="sparking">✦ Dokkan Sparking</button><h3>DOKKAN BATTLE</h3><button>Cartes LR</button><button>Cartes UR</button><button>Super</button><button>Extrême</button><h3>OUTILS</h3><button>Catégories</button><button>Liens</button><button>Compétences</button></aside>
 <section class="content"><div class="hero"><div><h2 id="heading">Toutes les cartes</h2><p>Recherche, filtres et fiches détaillées en français.</p></div><div class="count"><b id="count">0</b> cartes</div></div>
 <div class="filters"><input id="search2" class="control" placeholder="Rechercher un personnage, une catégorie, une attaque…"><select id="rarity" class="control"><option value="">Toutes les raretés</option><option>LR</option><option>UR</option><option>SSR</option><option>SP</option></select><select id="type" class="control"><option value="">Tous les types</option><option>AGL</option><option>TEQ</option><option>INT</option><option>STR</option><option>PHY</option></select><select id="class" class="control"><option value="">Toutes les classes</option><option>Super</option><option>Extreme</option></select></div>
 <div class="chips"><button class="chip" data-type="AGL">AGI</button><button class="chip" data-type="TEQ">TEC</button><button class="chip" data-type="INT">INT</button><button class="chip" data-type="STR">PUI</button><button class="chip" data-type="PHY">END</button><button class="chip" id="reset">Réinitialiser</button></div>
 <div id="grid" class="grid"></div><div id="empty" class="empty" hidden>Aucun résultat. Essaie un autre filtre.</div><footer>Projet fan-made non affilié à Bandai Namco, Akatsuki ou TOEI Animation. Les visuels et noms restent la propriété de leurs ayants droit.</footer></section></main>
-<div id="modal" class="modal"><div class="dialog"><div class="detailHead"><div><b id="detailGame"></b></div><button class="close" id="close">Fermer</button></div><div id="detail"></div></div></div>
+<div id="modal" class="modal"><div class="dialog"><div class="detailHead"><div><b id="detailGame"></b></div><button class="close" id="close">Fermer</button></div><div class="sectionbar"><h2>Fiche détaillée</h2><span>ID • Type • Rareté • Classe</span></div><div id="detail"></div></div></div>
 <script>
 const data=[
 {game:'dokkan',id:'11900',name:'Broly & Cheelai & Lemo',title:'Une nouvelle vie sur Vampa',rarity:'LR',type:'PHY',class:'Extreme',image:'https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/9/9e/Card_1019000_thumb_apng.png/revision/latest?cb=20200217115345&format=original'},
